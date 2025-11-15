@@ -1,65 +1,176 @@
+import React from "react";
 import Image from "next/image";
+import NavBar from "@/app/components/NavBar";
+import Footer from "@/app/components/Footer";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <div>
+        <NavBar />
+        <main>
+          <div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/dummy.jpg"
+              height={100}
+              width={100}
+              alt="hero-img"
+              className="hero-img"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </div>
+
+          <section className="mt-10">
+            <h1>Enjoy Quality Life in perumnas Housing</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+              accusamus odio reprehenderit recusandae velit tenetur asperiores
+              debitis rerum alias dolor perspiciatis molestias vitae veritatis
+              quae nostrum dignissimos possimus, a vel! Cum blanditiis sequi
+              excepturi, corrupti provident incidunt nulla commodi quas aperiam
+              odio dicta vero rem modi ad illum eum tenetur!
+            </p>
+          </section>
+
+          <section className="flex mt-10">
+            <div>
+              <h1>+100</h1>
+              <p>Units</p>
+            </div>
+
+            <div>
+              <h1>+100</h1>
+              <p>Units</p>
+            </div>
+
+            <div>
+              <h1>+100</h1>
+              <p>Units</p>
+            </div>
+          </section>
+
+          <section className="mt-10">
+            <div className="image-display flex">
+              <Image
+                src="/dummy.jpg"
+                width={100}
+                height={100}
+                alt="display-img"
+              />
+
+              <Image
+                src="/dummy.jpg"
+                width={100}
+                height={100}
+                alt="display-img"
+              />
+
+              <Image
+                src="/dummy.jpg"
+                width={100}
+                height={100}
+                alt="display-img"
+              />
+            </div>
+          </section>
+
+          <section className="mt-10">
+            <h1>Strategic Location</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+              veritatis a quod mollitia aliquid illo eaque quisquam fugiat,
+              consequatur voluptates exercitationem saepe nam quo reiciendis
+              neque, velit dolorem nemo quaerat, atque libero quos suscipit.
+              Consequuntur sint, est aspernatur tempore voluptatum ex quod
+              labore, reiciendis laboriosam vero in. Id, dignissimos
+              repellendus?
+            </p>
+          </section>
+
+          <section className="mt-10">
+            <h1>Modern Design</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+              at. Facere consequatur officiis eos doloremque asperiores
+              inventore est distinctio architecto incidunt. Reiciendis expedita
+              eius esse natus temporibus totam provident possimus.
+            </p>
+          </section>
+
+          <section className="mt-15">
+            <h1>Find your Dream Home</h1>
+            <p className="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati, totam aliquam ab laboriosam mollitia, ad aspernatur
+              iure doloremque modi blanditiis quaerat neque illo temporibus
+              ipsum, asperiores reiciendis suscipit ullam repellat!
+            </p>
+
+            <aside className="image-display mt-10">
+              <div>
+                <Image
+                  src="/dummy.jpg"
+                  width={100}
+                  height={100}
+                  alt="display-img"
+                />
+              </div>
+            </aside>
+          </section>
+
+          <section className="mt-10">
+            <h1>Frrequently Asked Questions</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+              quod.
+            </p>
+          </section>
+
+          <section className="questions mt-15">
+            <div className="quest-ans-box border p-3">
+              <div className="flex justify-between">
+                <p className="quest">What is safeNest ?</p>
+                <span>-</span>
+              </div>
+              <p className="ans">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                nam.
+              </p>
+            </div>
+            <div className="quest-ans-box border">
+              <div className="flex justify-between">
+                <p className="quest">What is safeNest ?</p>
+                <span>+</span>
+              </div>
+              <p className="ans">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                nam.
+              </p>
+            </div>
+            <div className="quest-ans-box border">
+              <div className="flex justify-between">
+                <p className="quest">What is safeNest ?</p>
+                <span>+</span>
+              </div>
+              <p className="ans">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                nam.
+              </p>
+            </div>
+            <div className="quest-ans-box border">
+              <div className="flex justify-between">
+                <p className="quest">What is safeNest ?</p>
+                <span>+</span>
+              </div>
+              <p className="ans">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                nam.
+              </p>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 }
