@@ -182,34 +182,26 @@ import React from "react";
 import Image from "next/image";
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
+import Accordion from '@/app/components/Accordion'
 
 export default function Page() {
   return (
     <>
       <div>
-        {/* Assuming NavBar component handles its own styling and is fixed/sticky or just at the top */}
+      
         <NavBar /> 
-
         <main>
-          {/* HERO SECTION: 
-            - Use a 'relative' container for the image and text overlay.
-            - The Image is set to cover the area.
-            - The image container covers the space from the NavBar down to the first-section.
-          */}
+          {/* HERO SECTION*/}
           <div className="relative w-full h-[500px] mb-10"> 
             <Image
               src="/dummy.jpg"
-              // Remove explicit height/width for fill/cover to work, and use 'fill' prop
               alt="hero-img"
               className="object-cover hero-img"
               priority 
               fill 
             />
             
-            {/* HEADING:
-              - Position absolutely, centered using 'top-1/2', 'left-1/2', and '-translate-x-1/2', '-translate-y-1/2'.
-              - Text is bold, large, and white for visibility over the image.
-            */}
+            {/* HEADING: */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
               <h1 className="text-4xl md:text-6xl font-extrabold text-white heading drop-shadow-lg">
                 Most comfortable, most classy
@@ -223,10 +215,10 @@ export default function Page() {
           <div className="container mx-auto px-4">
             {/* FIRST SECTION: Content with padding and margin */}
             <section className="first-section pt-10 pb-10 max-w-4xl mx-auto"> 
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              <h2 className="section-heading">
                 Enjoy Quality Life in Perumnas Housing
               </h2>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="section-paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
                 accusamus odio reprehenderit recusandae velit tenetur asperiores
                 debitis rerum alias dolor perspiciatis molestias vitae veritatis
@@ -296,8 +288,8 @@ export default function Page() {
             
             {/* STRATEGIC LOCATION SECTION */}
             <section className="mt-20 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Strategic Location</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="section-heading">Strategic Location</h2>
+              <p className="section-paragraph">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
                 veritatis a quod mollitia aliquid illo eaque quisquam fugiat,
                 consequatur voluptates exercitationem saepe nam quo reiciendis
@@ -310,8 +302,8 @@ export default function Page() {
 
             {/* MODERN DESIGN SECTION */}
             <section className="mt-20 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Modern Design</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="section-heading">Modern Design</h2>
+              <p className="section-paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
                 at. Facere consequatur officiis eos doloremque asperiores
                 inventore est distinctio architecto incidunt. Reiciendis expedita
@@ -321,8 +313,8 @@ export default function Page() {
 
             {/* FIND YOUR DREAM HOME SECTION */}
             <section className="mt-20 py-10 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Find your Dream Home</h2>
-              <p className="mt-8 text-gray-600 leading-relaxed">
+              <h2 className="section-heading">Find your Dream Home</h2>
+              <p className="section-paragraph">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Obcaecati, totam aliquam ab laboriosam mollitia, ad aspernatur
                 iure doloremque modi blanditiis quaerat neque illo temporibus
@@ -344,8 +336,8 @@ export default function Page() {
 
             {/* FAQ SECTION INTRO */}
             <section className="mt-20 max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Frrequently Asked Questions</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="section-heading">Frequently Asked Questions</h2>
+              <p className="section-paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
                 quod.
               </p>
@@ -359,18 +351,11 @@ export default function Page() {
                 { quest: "Is the location strategic?", ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nam.", open: false },
                 { quest: "What is the completion timeline?", ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nam.", open: false },
               ].map((item, index) => (
-                <div key={index} className="quest-ans-box border border-gray-200 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-md">
-                  <div className="flex justify-between items-center p-4 cursor-pointer bg-gray-50">
-                    <p className="quest font-semibold text-gray-700">{item.quest}</p>
-                    <span className="text-xl font-bold text-indigo-600">
-                      {item.open ? '−' : '+'}
-                    </span>
-                  </div>
-                  {/* The answer is conditionally rendered/styled to be visible only if 'open' */}
-                  <p className={`ans p-4 pt-0 text-gray-500 transition-all duration-500 ${item.open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 hidden'}`}>
-                    {item.ans}
-                  </p>
-                </div>
+                <Accordion 
+                  key={index}
+                  question={item.quest}
+                  answer={item.ans}
+                />
               ))}
             </section>
           </div>
