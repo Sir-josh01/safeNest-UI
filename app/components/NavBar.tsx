@@ -45,9 +45,9 @@ export default function NavBar() {
             </Link>
           ))}
           {/* Call to Action Button */}
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-200 ml-4">
+          {/* <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-200 ml-4">
             Enquire Now
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button (Hamburger/Close Icon) */}
