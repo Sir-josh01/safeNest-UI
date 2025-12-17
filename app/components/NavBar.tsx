@@ -2,6 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NavBar() {
   // State to manage the mobile menu's open/close status
@@ -19,7 +20,12 @@ export default function NavBar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo/Brand */}
         <Link href="/" className="text-2xl font-bold text-indigo-600">
-          SafeNest
+          <Image 
+            src="/logo.jpg"
+            width={100}
+            height={100}
+            alt="logo-image"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}

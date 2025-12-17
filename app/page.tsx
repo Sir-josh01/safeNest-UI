@@ -15,7 +15,7 @@ export default function Page() {
           {/* HERO SECTION*/}
           <div className="relative w-full h-[500px] mb-10"> 
             <Image
-              src="/safeNest-02.jpg"
+              src="/img-01.jpg"
               alt="hero-img"
               className="object-cover hero-img"
               priority 
@@ -40,7 +40,7 @@ export default function Page() {
                 Enjoy Quality Life in Perumnas Housing
               </h2>
               <p className="section-paragraph">
-                SafeNest, proudly situated within Perumnas Housing, is designed for those who seek comfort, security, and exceptional value. We don't just build houses; we curate thriving communities where every detail, from the robust construction to the tranquil green spaces, supports a premium living experience. Discover a place where peace of mind and modern convenience meet seamlessly.
+                SafeNest, proudly situated within Perumnas Housing, is designed for those who seek comfort, security, and exceptional value. We don&apos;t just build houses; we curate thriving communities where every detail, from the robust construction to the tranquil green spaces, supports a premium living experience. Discover a place where peace of mind and modern convenience meet seamlessly.
               </p>
             </section>
 
@@ -106,7 +106,7 @@ export default function Page() {
             <section className="mt-20 max-w-4xl mx-auto">
               <h2 className="section-heading">Strategic Location</h2>
               <p className="section-paragraph">
-               Location is everything. SafeNest offers unparalleled connectivity, placing you minutes away from central business districts, reputable schools, and major health facilities. Enjoy the convenience of easy access to major highways while returning to a quiet, secure, and family-friendly environment away from the city's noise. Your commute is streamlined, giving you more time for life.
+               Location is everything. SafeNest offers unparalleled connectivity, placing you minutes away from central business districts, reputable schools, and major health facilities. Enjoy the convenience of easy access to major highways while returning to a quiet, secure, and family-friendly environment away from the city&apos;s noise. Your commute is streamlined, giving you more time for life.
               </p>
             </section>
 
@@ -122,7 +122,7 @@ export default function Page() {
             <section className="mt-20 py-10 max-w-4xl mx-auto">
               <h2 className="section-heading">Find your Dream Home</h2>
               <p className="section-paragraph">
-                The journey to your perfect home starts here. Explore our varied floor plans, envision your future in a secure community, and take the first step toward ownership. Our dedicated sales team is ready to guide you through the process, from initial inquiry to final key handover. Your dream home isn't just a possibility—it's waiting for you.
+                The journey to your perfect home starts here. Explore our varied floor plans, envision your future in a secure community, and take the first step toward ownership. Our dedicated sales team is ready to guide you through the process, from initial inquiry to final key handover. Your dream home isn&apos;t just a possibility—it&apos;s waiting for you.
               </p>
 
               <aside className="image-display mt-10">
