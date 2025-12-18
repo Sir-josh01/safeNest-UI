@@ -24,11 +24,11 @@ export default function Page() {
             
             {/* HEADING: */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white heading drop-shadow-lg">
-                Most comfortable, most classy
+              <h1 className="text-4xl md:text-6xl font-extrabold text-grey-500 heading drop-shadow-lg">
+                {/* Most comfortable, most classy */}
               </h1>
               <p className="mt-4 text-xl md:text-2xl text-white font-medium drop-shadow-md">
-                Make your living experience more classy
+                {/* Make your living experience more classy */}
               </p>
             </div>
           </div>

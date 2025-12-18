@@ -10,9 +10,9 @@ export default function NavBar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Units", href: "/units" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Units", href: "/" },
+    { name: "About", href: "/" },
+    { name: "Contact", href: "/" },
   ];
 
   return (
@@ -20,12 +20,17 @@ export default function NavBar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo/Brand */}
         <Link href="/" className="text-2xl font-bold text-indigo-600">
-          <Image 
-            src="/logo.jpg"
-            width={100}
-            height={100}
-            alt="logo-image"
-          />
+        <div className="bg-slate-100 p-2 rounded-xl border border-slate-200 border-l-4 pl-3 py-1">
+        <Image 
+          src="/logo.png"          // Changed to .png or .svg for transparency
+          width={120}             // Adjusted for a standard Navbar height
+          height={40}              // Most logos are rectangular, not square
+          alt="SafeNest Logo"      // Better for SEO and accessibility
+          priority                 // Tells Next.js to load this first (LCP optimization)
+          //className="object-contain" // Ensures the logo isn't stretched
+          className="object-contain" // Ensures the logo isn't stretched
+        />
+        </div>
         </Link>
 
         {/* Desktop Navigation Links */}
